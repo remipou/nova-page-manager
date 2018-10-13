@@ -22,7 +22,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Remipou\\NovaPageManager\\PageManagerServiceProvider"
+                "Remipou\\NovaPageManager\\NovaPageServiceProvider"
             ]
         }
     },
