@@ -1,0 +1,32 @@
+{
+    "name": "remipou/nova-page-manager",
+    "description": "Page manager for Laravel Nova",
+    "type": "package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rémi Puig",
+            "email": "remi.puig@gmail.com"
+        }
+    ],
+    "version": "1.0.0-dev",
+    "require": {
+        "php": ">=7.1.0",
+        "cviebrock/eloquent-sluggable": "^4.6",
+        "64robots/nova-fields": "^0.3.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Remipou\\NovaPageManager\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Remipou\\NovaPageManager\\PageManagerServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
