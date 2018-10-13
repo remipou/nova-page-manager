@@ -37,7 +37,7 @@ Route::get('{slug}/{param?}', '\Remipou\NovaPageManager\PageController@page')
 ```
 
 ## Usage
-Create templates in `resources/views/templates`. Route and Controller are included but you need to mstyle your templates.
+Create templates in `resources/views/templates`. Route and Controller are included but you need to style your templates.
 
 ## Screenshots
 <img width="1416" alt="screenshot1" src="https://user-images.githubusercontent.com/4225911/46909231-2d95ba80-cf2f-11e8-9bdd-dc7659e83704.png">
