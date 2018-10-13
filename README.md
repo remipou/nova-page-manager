@@ -15,7 +15,7 @@ composer require remipou/novapagemanager
 
 Publish configuration, views and migrations:
 ```bash
-php artisan vendor:publish --provider="Remipou\NovaPageManager\PageManagerServiceProvider"
+php artisan vendor:publish --provider="Remipou\NovaPageManager\NovaPageServiceProvider"
 ```
 
 Run the migrations
