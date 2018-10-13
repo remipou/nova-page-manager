@@ -9,7 +9,6 @@
             "email": "remi.puig@gmail.com"
         }
     ],
-    "version": "1.0.0-dev",
     "require": {
         "php": ">=7.1.0",
         "cviebrock/eloquent-sluggable": "^4.6",
