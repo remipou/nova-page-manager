@@ -2,44 +2,44 @@
 
 namespace Remipou\NovaPageManager;
 
-use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Nova;
 use Laravel\Nova\Events\ServingNova;
+use Illuminate\Support\ServiceProvider;
 use Illuminate\Console\Scheduling\Schedule;
 use Laravel\Nova\Trix\PruneStaleAttachments;
 
-class PageManagerServiceProvider extends ServiceProvider {
-	
-	public function boot() {
+class NovaPageServiceProvider extends ServiceProvider
+{
+    public function boot()
+    {
+        $this->publishes([
+            __DIR__.'/config/pagemanager.php' => config_path('pagemanager.php'),
+        ]);
 
-		$this->publishes([
-			__DIR__ . '/config/pagemanager.php' => config_path('pagemanager.php'),
-		]);
+        $this->mergeConfigFrom(__DIR__.'/config/pagemanager.php', 'pagemanager');
 
-		$this->mergeConfigFrom(__DIR__ . '/config/pagemanager.php', 'pagemanager');
+        $this->loadMigrationsFrom(__DIR__.'/migrations');
 
-		$this->loadMigrationsFrom(__DIR__ . '/migrations');
+        $this->loadViewsFrom(__DIR__.'/views', 'pagemanager');
 
-		$this->loadViewsFrom(__DIR__ . '/views', 'pagemanager');
+        $this->publishes([
+            __DIR__.'/views' => resource_path('views/templates'),
+        ]);
 
-		$this->publishes([
-			__DIR__ . '/views' => resource_path('views/templates'),
-		]);
+        Nova::serving(function (ServingNova $event) {
+            //Nova::script('nova-page-manager', __DIR__ . '/../dist/js/nova-page-manager.js');
+            Nova::style('nova-page-manager', __DIR__.'/../dist/css/nova-page-manager.css');
+        });
 
-		Nova::serving(function(ServingNova $event) {
-			//Nova::script('nova-page-manager', __DIR__ . '/../dist/js/nova-page-manager.js');
-			Nova::style('nova-page-manager', __DIR__ . '/../dist/css/nova-page-manager.css');
-		});
-
-		$this->app->booted(function () {
+        $this->app->booted(function () {
             $schedule = $this->app->make(Schedule::class);
             $schedule->call(function () {
-				(new PruneStaleAttachments)();
-			})->daily();
+                (new PruneStaleAttachments)();
+            })->daily();
         });
-	}
+    }
 
-	public function register() {
-		
-	}
+    public function register()
+    {
+    }
 }
