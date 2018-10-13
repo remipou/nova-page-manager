@@ -2,8 +2,7 @@
 [![Total Downloads](https://poser.pugx.org/remipou/nova-page-manager/downloads)](https://packagist.org/packages/remipou/nova-page-manager)
 [![Latest Unstable Version](https://poser.pugx.org/remipou/nova-page-manager/v/unstable)](https://packagist.org/packages/remipou/nova-page-manager)
 [![License](https://poser.pugx.org/remipou/nova-page-manager/license)](https://packagist.org/packages/remipou/nova-page-manager)
-[![StyleCI]
-(https://github.styleci.io/repos/152878593/shield?branch=master)]
+[![StyleCI](https://github.styleci.io/repos/152878593/shield?branch=master)](https://github.styleci.io/repos/152878593)
 
 # A page manager for Nova
 A simple page manager to use with Laravel and Nova. 
