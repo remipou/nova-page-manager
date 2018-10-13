@@ -46,8 +46,10 @@ Create templates in `resources/views/templates`. Route and Controller are includ
 
 
 ## Roadmap
+- add markup to content
 - add hierarchy (parent/child pages)
 - add a menu manager
+- add a page builder
 
 ### Changelog
 - 1.0.0 first version
