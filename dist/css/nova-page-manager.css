@@ -1,9 +1,1 @@
-.trix-content .attachment.attachment--preview {
-  width: 200px;
-  margin: 5px;
-}
-
-.trix-content .attachment__caption {
-  display: none;
-}
-
+.trix-content .attachment.attachment--preview{width:200px;margin:5px}.trix-content .attachment__caption{display:none}
