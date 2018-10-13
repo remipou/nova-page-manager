@@ -3,10 +3,8 @@
 namespace Remipou\NovaPageManager;
 
 use App\Nova\Resource;
-use R64\NovaFields\Text;
-use R64\NovaFields\Image;
-// use Laravel\Nova\Fields\Text;
-// use Laravel\Nova\Fields\Image;
+use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Trix;
