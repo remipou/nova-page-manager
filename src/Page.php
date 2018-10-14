@@ -53,7 +53,7 @@ class Page extends Model
 
     public function getSanitizedContentAttribute()
     {
-        return preg_replace('/(<a.*figure.*>)(<img.*>)(<figcaption.*<\/a>)/U', '$2', $this->content);
+        return preg_replace('/(<a.*figure.*>)((<img.*)(width="\d+" height="\d+")(>))(<figcaption.*<span.*>((.*)\..*)<\/span>.*<\/a>)/U', '$3class="image-$8"$5', $this->content);
     }
 
     public function sluggable()
