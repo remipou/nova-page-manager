@@ -10,7 +10,7 @@ A simple page manager to use with Laravel and Nova.
 ## Installation
 Install with composer:
 ```bash
-composer require remipou/novapagemanager
+composer require remipou/nova-page-manager
 ```
 
 Publish configuration, views and migrations:
