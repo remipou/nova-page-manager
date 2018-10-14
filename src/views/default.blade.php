@@ -11,8 +11,10 @@
 		<meta name="og:description" content="{{ $page->meta_description }}">
 		<meta name="og:image" content="{{ !empty($page->og_image) ? url($page->og_image) : null }}">
 	</head>
-	<body>
+	<body class="template-{{ $page->template }} page-{{ $page->slug }}">
 		<h1>{{ $page->title }}</h1>
-		{!! $page->content !!}
+		<div class="content">
+			{!! $page->sanitizedContent !!}
+		</div>
 	</body>
 </html>
