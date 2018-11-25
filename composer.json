@@ -11,8 +11,7 @@
     ],
     "require": {
         "php": ">=7.1.0",
-        "cviebrock/eloquent-sluggable": "^4.6",
-        "64robots/nova-fields": "^0.3.4"
+        "cviebrock/eloquent-sluggable": "^4.6"
     },
     "autoload": {
         "psr-4": {
