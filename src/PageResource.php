@@ -37,12 +37,12 @@ class PageResource extends Resource
 
     public static function label()
     {
-        return 'Pages';
+        return __('Pages');
     }
 
     public static function singularLabel()
     {
-        return 'Page';
+        return __('Page');
     }
 
     /**
@@ -56,42 +56,42 @@ class PageResource extends Resource
         return [
             ID::make()->sortable(),
 
-            Select::make('Template')
+            Select::make(__('Template'))
                 ->options(array_combine($this->getTemplates(), $this->getTemplates()))
                 ->onlyOnForms(),
 
-            Text::make('Name')
+            Text::make(__('Name'))
                 ->resolveUsing(function () {
                     return '<a target="_blank" href="'.url($this->slug).'">'.$this->name.'</a>';
                 })
                 ->asHtml()
                 ->exceptOnForms(),
 
-            Text::make('Name')
+            Text::make(__('Name'))
                 ->rules('required', 'max:255')
                 ->onlyOnForms(),
 
-            Text::make('Title')
+            Text::make(__('Title'))
                 ->sortable()
                 ->rules('required', 'max:255'),
 
             Text::make('Slug')->sortable(),
 
-            Select::make('Template')
+            Select::make(__('Template'))
                 ->options(array_combine($this->getTemplates(), $this->getTemplates()))
                 ->exceptOnForms(),
 
-            Trix::make('Content')
+            Trix::make(__('Content'))
                 ->withFiles('public')
                 ->hideFromIndex(),
 
-            Text::make('Meta title', 'meta_title')
+            Text::make(__('Meta title'), 'meta_title')
                 ->hideFromIndex(),
 
-            Text::make('Meta description', 'meta_description')
+            Text::make(__('Meta description'), 'meta_description')
                 ->hideFromIndex(),
 
-            Image::make('OG image', 'og_image')
+            Image::make(__('OG image'), 'og_image')
                 ->disk('public')
                 ->path(config('pagemanager.images_location'))
                 ->storeOriginalName('og_image_name')
