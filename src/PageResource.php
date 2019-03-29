@@ -56,32 +56,32 @@ class PageResource extends Resource
         return [
             ID::make()->sortable(),
 
-            Select::make(__('Template'))
+            Select::make(__('Template'), 'template')
                 ->options(array_combine($this->getTemplates(), $this->getTemplates()))
                 ->onlyOnForms(),
 
-            Text::make(__('Name'))
+            Text::make(__('Name'), 'name')
                 ->resolveUsing(function () {
                     return '<a target="_blank" href="'.url($this->slug).'">'.$this->name.'</a>';
                 })
                 ->asHtml()
                 ->exceptOnForms(),
 
-            Text::make(__('Name'))
+            Text::make(__('Name'), 'name')
                 ->rules('required', 'max:255')
                 ->onlyOnForms(),
 
-            Text::make(__('Title'))
+            Text::make(__('Title'), 'title')
                 ->sortable()
                 ->rules('required', 'max:255'),
 
             Text::make('Slug')->sortable(),
 
-            Select::make(__('Template'))
+            Select::make(__('Template'), 'template')
                 ->options(array_combine($this->getTemplates(), $this->getTemplates()))
                 ->exceptOnForms(),
 
-            Trix::make(__('Content'))
+            Trix::make(__('Content'), 'content')
                 ->withFiles('public')
                 ->hideFromIndex(),
 
