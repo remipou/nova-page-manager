@@ -39,7 +39,8 @@ protected function resources() {
 Add this at the end of your `routes/web.php`:
 ```php
 Route::get('{slug}/{param?}', '\Remipou\NovaPageManager\PageController@page')
-	->where('slug', '^((?!' . trim(config('nova.path'), '/') . '|nova-).)*$');
+	->where('slug', '^((?!' . trim(config('nova.path'), '/') . '|nova-).)*$')
+	->name('page-manager');
 ```
 
 ## Usage
