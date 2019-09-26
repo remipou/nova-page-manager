@@ -11,7 +11,7 @@
     ],
     "require": {
         "php": ">=7.1.0",
-        "cviebrock/eloquent-sluggable": "^4.6"
+        "cviebrock/eloquent-sluggable": "6.0.*"
     },
     "autoload": {
         "psr-4": {
