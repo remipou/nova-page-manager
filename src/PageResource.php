@@ -92,7 +92,7 @@ class PageResource extends Resource
                 ->hideFromIndex(),
 
             Image::make(__('OG image'), 'og_image')
-                ->disk('public')
+                ->disk(config('pagemanager.images_disk'))
                 ->path(config('pagemanager.images_location'))
                 ->storeOriginalName('og_image_name')
                 ->prunable()
