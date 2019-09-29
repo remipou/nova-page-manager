@@ -10,7 +10,7 @@ return [
 
     /* the location where your images are saved (storage/public/...) */
     'images_location' => 'images',
-    
+
     /* image storoage disk*/
     'images_disk' => 'public',
 ];
