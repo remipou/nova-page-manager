@@ -61,7 +61,7 @@ class PageResource extends Resource
                 ->onlyOnForms(),
 
             Text::make(__('Name'), 'name')
-                ->resolveUsing(function () {
+                ->displayUsing(function () {
                     return '<a target="_blank" href="'.route('page-manager', ['slug' => $this->slug]).'">'.$this->name.'</a>';
                 })
                 ->asHtml()
