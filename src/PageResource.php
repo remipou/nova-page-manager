@@ -3,12 +3,12 @@
 namespace Remipou\NovaPageManager;
 
 use App\Nova\Resource;
-use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Trix;
+use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Select;
+use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Trix;
 
 class PageResource extends Resource
 {
@@ -61,7 +61,7 @@ class PageResource extends Resource
                 ->onlyOnForms(),
 
             Text::make(__('Name'), 'name')
-                ->resolveUsing(function () {
+                ->displayUsing(function () {
                     return '<a target="_blank" href="'.route('page-manager', ['slug' => $this->slug]).'">'.$this->name.'</a>';
                 })
                 ->asHtml()
