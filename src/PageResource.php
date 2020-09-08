@@ -62,7 +62,7 @@ class PageResource extends Resource
 
             Text::make(__('Name'), 'name')
                 ->displayUsing(function () {
-                    return '<a target="_blank" href="'.route('page-manager', ['slug' => $this->slug]).'">'.$this->name.'</a>';
+                    return '<a target="_blank" href="'.route('page-manager', ['slug' => $this->slug]).'">'.strip_tags($this->name).'</a>';
                 })
                 ->asHtml()
                 ->exceptOnForms(),
