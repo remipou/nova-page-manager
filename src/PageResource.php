@@ -2,7 +2,6 @@
 
 namespace Remipou\NovaPageManager;
 
-
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Image;
