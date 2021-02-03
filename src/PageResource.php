@@ -2,13 +2,14 @@
 
 namespace Remipou\NovaPageManager;
 
-use Laravel\Nova\Resource;
+
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Trix;
+use Laravel\Nova\Resource;
 
 class PageResource extends Resource
 {
