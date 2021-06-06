@@ -56,7 +56,7 @@ class Page extends Model
         return preg_replace('/(<a.*figure.*>)((<img.*)(width="\d+" height="\d+")(>))(<figcaption.*<span.*>((.*)\..*)<\/span>.*<\/a>)/U', '$3class="image-$8"$5', $this->content);
     }
 
-    public function sluggable()
+    public function sluggable(): array
     {
         return [
             'slug' => [
