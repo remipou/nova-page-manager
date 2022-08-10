@@ -2,7 +2,7 @@
 
 namespace Remipou\NovaPageManager;
 
-use App\Http\Controllers\Controller;
+use Illuminate\Routing\Controller;
 
 class PageController extends Controller
 {
